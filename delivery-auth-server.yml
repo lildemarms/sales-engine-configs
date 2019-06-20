@@ -28,9 +28,8 @@ spring:
         data: classpath:/sql/data.sql
         driver-class-name: org.postgresql.Driver
         password: 'postgres'
-        platform: postgresql
         schema: classpath:/sql/schema.sql
-        url: jdbc:postgresql://localhost/oauth
+        url: jdbc:postgresql://localhost:5432/oauth
         username: postgres
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
