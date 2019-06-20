@@ -25,13 +25,13 @@ security:
 
 spring:
     datasource:
-        data: classpath:/sql/data.sql
+        url: jdbc:postgresql://localhost:5432/oauth
         driver-class-name: org.postgresql.Driver
+        username: 'postgres'
         password: 'postgres'
         platform: postgres
+        data: classpath:/sql/data.sql
         schema: classpath:/sql/schema.sql
-        url: 'jdbc:postgresql://localhost:5432/oauth'
-        username: postgres
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
         generate-ddl: false
