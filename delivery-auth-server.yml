@@ -30,7 +30,7 @@ spring:
         password: 'postgres'
         platform: postgresql
         schema: classpath:/sql/schema.sql
-        url: jdbc:postgresql://localhost:5432/oauth?createDatabaseIfNotExist=true
+        url: jdbc:postgresql://localhost/oauth
         username: root
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
