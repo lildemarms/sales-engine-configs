@@ -20,9 +20,6 @@ spring:
         username: 'postgres'
         password: 'postgres'
         platform: postgres
-        initialization-mode: always
-        data: classpath:/sql/data.sql
-        schema: classpath:/sql/schema.sql
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
         generate-ddl: false
