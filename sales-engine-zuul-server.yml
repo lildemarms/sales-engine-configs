@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 9095
 
 eureka:
   instance:
@@ -12,3 +12,23 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
+
+zuul:
+  prefix: /api
+  ignored-services: '*'
+  routes:
+    orders:
+      path: /orders/**
+      serviceId: delivery-order-service
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
+    payments:
+      path: /payments/**
+      serviceId: delivery-payments-service
+      strip-prefix: false   
+      sensitive-headers: Cookie,Set-Cookie
+    creditcards:
+      path: /creditcards/**
+      serviceId: delivery-payments-service
+      strip-prefix: false   
+      sensitive-headers: Cookie,Set-Cookie
