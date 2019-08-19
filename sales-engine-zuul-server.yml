@@ -14,7 +14,7 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 zuul:
-  prefix: /api
+#  prefix: /api
   ignored-services: '*'
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
@@ -24,18 +24,18 @@ zuul:
     oauth:
       path: /oauth/**
       url: http://localhost:9092/spring-security-oauth-server/oauth
-    orders:
-      path: /orders/**
-      serviceId: delivery-order-service
-      strip-prefix: false
-      sensitive-headers: Cookie,Set-Cookie
-    payments:
-      path: /payments/**
-      serviceId: delivery-payments-service
-      strip-prefix: false   
-      sensitive-headers: Cookie,Set-Cookie
-    creditcards:
-      path: /creditcards/**
-      serviceId: delivery-payments-service
-      strip-prefix: false   
-      sensitive-headers: Cookie,Set-Cookie
+#    orders:
+#      path: /orders/**
+#      serviceId: delivery-order-service
+#      strip-prefix: false
+#      sensitive-headers: Cookie,Set-Cookie
+#    payments:
+#      path: /payments/**
+#      serviceId: delivery-payments-service
+#      strip-prefix: false   
+#      sensitive-headers: Cookie,Set-Cookie
+#    creditcards:
+#      path: /creditcards/**
+#      serviceId: delivery-payments-service
+#      strip-prefix: false   
+#      sensitive-headers: Cookie,Set-Cookie
