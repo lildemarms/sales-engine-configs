@@ -13,10 +13,23 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
+
 zuul:
   prefix: /api
   ignored-services: '*'
+  sensitiveHeaders: Cookie,Set-Cookie
   routes:
+    spring-security-oauth-resource:
+      path: /spring-security-oauth-resource/**
+      url: http://localhost:9092/spring-security-oauth-resource
+    oauth:
+      path: /oauth/**
+      url: http://localhost:9092/spring-security-oauth-server/oauth  
     orders:
       path: /orders/**
       serviceId: delivery-order-service
