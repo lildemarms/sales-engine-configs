@@ -32,18 +32,18 @@ zuul:
       strip-prefix: false
       path: /oauth/**
       url: http://localhost:9092
-#    orders:
-#      path: /orders/**
-#      serviceId: delivery-order-service
-#      strip-prefix: false
-#      sensitive-headers: Cookie,Set-Cookie
-#    payments:
-#      path: /payments/**
-#      serviceId: delivery-payments-service
-#      strip-prefix: false   
-#      sensitive-headers: Cookie,Set-Cookie
-#    creditcards:
-#      path: /creditcards/**
-#      serviceId: delivery-payments-service
-#      strip-prefix: false   
-#      sensitive-headers: Cookie,Set-Cookie
+    orders:
+      path: /api/orders/**
+      serviceId: delivery-order-service
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
+    payments:
+      path: /api/payments/**
+      serviceId: delivery-payments-service
+      strip-prefix: false   
+      sensitive-headers: Cookie,Set-Cookie
+    creditcards:
+      path: /api/creditcards/**
+      serviceId: delivery-payments-service
+      strip-prefix: false   
+      sensitive-headers: Cookie,Set-Cookie
