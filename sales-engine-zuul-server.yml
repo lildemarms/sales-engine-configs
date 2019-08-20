@@ -13,15 +13,23 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+security:
+  basic:
+    enabled: false
+  user:
+    password: none
+
 zuul:
 #  prefix: /api
   ignored-services: '*'
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
     spring-security-oauth-resource:
+      strip-prefix: false
       path: /spring-security-oauth-resource/**
       url: http://localhost:9092
     oauth:
+      strip-prefix: false
       path: /oauth/**
       url: http://localhost:9092
 #    orders:
