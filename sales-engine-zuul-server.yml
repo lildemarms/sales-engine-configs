@@ -47,3 +47,15 @@ zuul:
       serviceId: delivery-payments-service
       strip-prefix: false   
       sensitive-headers: Cookie,Set-Cookie
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+sales-engine-auth-server:
+  ribbon:
+    ReadTimeout: 70000
