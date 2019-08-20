@@ -34,17 +34,17 @@ zuul:
       url: http://localhost:9092
     orders:
       path: /api/orders/**
-      serviceId: delivery-order-service
+      serviceId: sales-engine-order-service
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
     payments:
       path: /api/payments/**
-      serviceId: delivery-payments-service
+      serviceId: sales-engine-payments-service
       strip-prefix: false   
       sensitive-headers: Cookie,Set-Cookie
     creditcards:
       path: /api/creditcards/**
-      serviceId: delivery-payments-service
+      serviceId: sales-engine-payments-service
       strip-prefix: false   
       sensitive-headers: Cookie,Set-Cookie
 
@@ -59,4 +59,3 @@ hystrix:
 sales-engine-auth-server:
   ribbon:
     ReadTimeout: 70000
-    listOfServers: http://localhost:9093
