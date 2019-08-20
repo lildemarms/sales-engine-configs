@@ -59,3 +59,4 @@ hystrix:
 sales-engine-auth-server:
   ribbon:
     ReadTimeout: 70000
+    listOfServers: http://localhost:9093
