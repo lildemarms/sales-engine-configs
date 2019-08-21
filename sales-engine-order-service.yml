@@ -33,3 +33,15 @@ security:
   oauth2:
     resource:
       userInfoUri: ${authserver.hostname}/user
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+sales-engine-payments-service:
+  ribbon:
+    ReadTimeout: 70000

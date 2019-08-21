@@ -59,3 +59,11 @@ hystrix:
 sales-engine-auth-server:
   ribbon:
     ReadTimeout: 70000
+
+sales-engine-payments-service:
+  ribbon:
+    ReadTimeout: 70000
+
+sales-engine-order-service:
+  ribbon:
+    ReadTimeout: 70000
