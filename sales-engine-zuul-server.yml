@@ -56,6 +56,10 @@ hystrix:
           thread:
             timeoutInMilliseconds: 60000
 
+feign:
+  hystrix:
+    enabled: true
+
 sales-engine-auth-server:
   ribbon:
     ReadTimeout: 70000

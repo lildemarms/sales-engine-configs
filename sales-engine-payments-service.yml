@@ -34,6 +34,10 @@ security:
     resource:
       userInfoUri: ${authserver.hostname}/user
 
+feign:
+  hystrix:
+    enabled: true
+
 hystrix:
   command:
     default:
