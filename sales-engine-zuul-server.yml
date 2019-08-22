@@ -1,6 +1,8 @@
 server:
   port: 9095
 
+debug: true
+
 eureka:
   instance:
     hostname: localhost
@@ -42,11 +44,11 @@ zuul:
       serviceId: sales-engine-payments-service
       strip-prefix: false   
       sensitive-headers: Cookie,Set-Cookie
-#    creditcards:
-#      path: /api/creditcards/**
-#      serviceId: sales-engine-payments-service
-#      strip-prefix: false   
-#      sensitive-headers: Cookie,Set-Cookie
+    creditcards:
+      path: /api/creditcards/**
+      serviceId: sales-engine-payments-service
+      strip-prefix: false   
+      sensitive-headers: Cookie,Set-Cookie
 
 hystrix:
   command:
