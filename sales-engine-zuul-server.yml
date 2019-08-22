@@ -42,12 +42,12 @@ zuul:
     payments:
       path: /api/payments/**
       serviceId: sales-engine-payments-service
-      strip-prefix: false   
+      strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
     creditcards:
       path: /api/creditcards/**
       serviceId: sales-engine-payments-service
-      strip-prefix: false   
+      strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
 
 hystrix:
