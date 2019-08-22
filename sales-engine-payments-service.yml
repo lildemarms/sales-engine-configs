@@ -1,8 +1,6 @@
 server:
   port: 9094
 
-debug: true
-
 eureka:
   instance:
     hostname: localhost
