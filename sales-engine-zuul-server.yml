@@ -1,7 +1,12 @@
 server:
   port: 9095
 
-debug: true
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix: trace
 
 eureka:
   instance:
@@ -22,6 +27,8 @@ security:
     password: none
 
 zuul:
+  debug:
+    request: true
 #  prefix: /api
   ignored-services: '*'
   sensitiveHeaders: Cookie,Set-Cookie
