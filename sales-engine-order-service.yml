@@ -1,13 +1,6 @@
 server:
   port: 9093
 
-logging:
-  level:
-    org:
-      springframework:
-        cloud:
-          netflix: trace
-
 eureka:
   instance:
     hostname: localhost
