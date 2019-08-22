@@ -42,11 +42,11 @@ zuul:
       serviceId: sales-engine-payments-service
       strip-prefix: false   
       sensitive-headers: Cookie,Set-Cookie
-    creditcards:
-      path: /api/creditcards/**
-      serviceId: sales-engine-payments-service
-      strip-prefix: false   
-      sensitive-headers: Cookie,Set-Cookie
+#    creditcards:
+#      path: /api/creditcards/**
+#      serviceId: sales-engine-payments-service
+#      strip-prefix: false   
+#      sensitive-headers: Cookie,Set-Cookie
 
 hystrix:
   command:
