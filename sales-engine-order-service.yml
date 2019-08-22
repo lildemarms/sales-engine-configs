@@ -45,7 +45,3 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
-
-sales-engine-payments-service:
-  ribbon:
-    ReadTimeout: 70000
