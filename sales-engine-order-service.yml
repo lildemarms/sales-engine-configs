@@ -39,6 +39,7 @@ feign:
     enabled: true
 
 hystrix:
+  shareSecurityContext: true
   command:
     default:
       execution:

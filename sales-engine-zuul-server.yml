@@ -49,6 +49,7 @@ zuul:
       sensitive-headers: Cookie,Set-Cookie
 
 hystrix:
+  shareSecurityContext: true
   command:
     default:
       execution:
