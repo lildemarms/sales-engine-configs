@@ -1,5 +1,5 @@
 server:
-  port: 9095
+  port: 8080
 
 eureka:
   instance:
@@ -20,7 +20,7 @@ security:
     password: none
 
 zuul:
-#  prefix: /api
+  prefix: /api
   ignored-services: '*'
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
